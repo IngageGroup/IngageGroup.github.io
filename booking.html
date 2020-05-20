@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Engage with Ingage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link href="assets/img/favicon_io/favicon.ico" rel="icon" type="image/png">
+    
+	<link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/styles.css">
+		<link rel="stylesheet" href="./assets/css/lazy.css">
+		<link rel="stylesheet" href="./assets/css/demo.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+		<script type="text/javascript">
+			function CheckChildren(val){
+			 if(val=='1' || val=='2' || val=='3')
+			 document.getElementById('childAgeGroup-1').style.display='block';
+			 else  
+			 document.getElementById('childAgeGroup-1').style.display='none';
+			 if(val=='2' || val=='3' || val=='4' || val=='5')
+			 document.getElementById('childAgeGroup-2').style.display='block';
+			 else  
+			 document.getElementById('childAgeGroup-2').style.display='none';
+			 if(val=='3' || val=='4' || val=='5')
+			 document.getElementById('childAgeGroup-3').style.display='block';
+			 else  
+			 document.getElementById('childAgeGroup-3').style.display='none';
+			}		
+			</script> 
+  </head>
+  <body class="register">
+    <nav class="navbar navbar-expand-md navbar-transparent navbar-light">
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class="col-md-2 offset-md-1 d-flex justify-content-between">
+	        <a class="navbar-brand text-dark d-flex align-items-center" href="index.html"><img src="assets/img/Ingage_arrow_no_BG.png" alt="QA Tools Arrow" height="25" class="mr-2"> Engage with Ingage</a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-7" aria-controls="navbarNavDropdown-7"
+	          aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+		    </div>
+	    </div>
+    </div>
+  </nav>
+<div class="container-fluid">
+  <div class="row">
+	  <div class="col-12 col-md-4 offset-md-1">
+				  <div class="register-form">
+					  <div class="mb-5">
+						  <h1>Flight Booking</h1>
+						  <p class="lead">Locate your flight using the options below.</p>
+					  </div>
+					  <form action="" method="post" class="trip-form">
+							<fieldset class="form-group">
+									<div class="custom-control custom-radio my-2">
+											<input type="radio" id="one-way" name="flight-type" class="custom-control-input">
+											<label class="custom-control-label" for="one-way">One Way</label>
+										  </div>
+										  <div class="custom-control custom-radio my-2">
+												<input type="radio" id="round-trip" name="flight-type" class="custom-control-input" checked>
+												<label class="custom-control-label" for="round-trip">Roundtrip</label>
+										  </div>
+						  </fieldset>
+							
+							<fieldset>
+							  <div class="form-group">
+								<label for="from" class="bold-type">Flight Origin </label>
+								<input id="flight-origin-flp" class="form-control" type="text" name="from" maxlength="100" placeholder="Any world wide city or airport">
+							  </div>
+							  <div class="form-group">
+								<label for="to" class="bold-type">Flight Destination </label>
+								<input id="flight-destination-flp" class="form-control" type="text" name="to"  maxlength="100" placeholder="Any world wide city or airport">
+							  </div>
+							</fieldset>
+							<fieldset>
+							  <div class="form-group">
+								<label for="depart" class="bold-type">Depart on</label>
+								<input class="form-control" id="flight-departing-flp" placeholder="Pick a date" type="date" name="depart" />
+							  </div>
+							  <div class="form-group">
+								<label for="return" class="bold-type">Return on</label>
+								<input class="form-control" id="flight-returning-flp" placeholder="Pick a date" type="date" name="return" />
+							  </div>
+							</fieldset>
+							
+							<fieldset>
+							  <div class="form-group">
+								<label for="adults" class="bold-type">Adults</label> 
+								<select name="adults" class="form-control ticket-count" id="flight-adults-flp">
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								  <option value="5">5</option>
+								</select>
+							  </div>
+							  <!-- Need to add chidren ages on click -->
+							   <div class="form-group">
+								<label for="children">Children</label>
+								 <select name="children" class="form-control ticket-count" id="flight-chidren-flp" onchange='CheckChildren(this.value);'>
+								   <option value="0">0</option>
+								   <option value="1">1</option>
+								   <option value="2">2</option>
+								   <option value="3">3</option>
+								 </select>
+								 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+							  </div>
+							  <div class="form-group childAgeGroup" id="childAgeGroup-1">
+									<label for="childrenAge1">Age of First Child</label>
+									 <select name="childrenAge1" class="form-control ticket-count" id="flight-age-select-1-flp">
+									   <option value="2">2</option>
+									   <option value="3">3</option>
+									   <option value="4">4</option>
+									   <option value="5">5</option>
+									   <option value="6">6</option>
+									   <option value="7">7</option>
+									   <option value="8">8</option>
+									   <option value="9">9</option>
+									   <option value="10">10</option>
+									   <option value="11">11</option>
+									   <option value="12">12</option>
+									 </select>
+									 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+								  </div>
+								  <div class="form-group childAgeGroup" id="childAgeGroup-2">
+									<label for="childrenAge2">Age of Second Child</label>
+									 <select name="childrenAge2" class="form-control ticket-count" id="flight-age-select-2-flp">
+									   <option value="2">2</option>
+									   <option value="3">3</option>
+									   <option value="4">4</option>
+									   <option value="5">5</option>
+									   <option value="6">6</option>
+									   <option value="7">7</option>
+									   <option value="8">8</option>
+									   <option value="9">9</option>
+									   <option value="10">10</option>
+									   <option value="11">11</option>
+									   <option value="12">12</option>
+									 </select>
+									 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+								  </div>
+								  <div class="form-group childAgeGroup" id="childAgeGroup-3">
+									<label for="childrenAge3">Age of Third Child</label>
+									 <select name="childrenAge3" class="form-control ticket-count" id="flight-age-select-3-flp">
+									   <option value="2">2</option>
+									   <option value="3">3</option>
+									   <option value="4">4</option>
+									   <option value="5">5</option>
+									   <option value="6">6</option>
+									   <option value="7">7</option>
+									   <option value="8">8</option>
+									   <option value="9">9</option>
+									   <option value="10">10</option>
+									   <option value="11">11</option>
+									   <option value="12">12</option>
+									 </select>
+									 <small id="childAgeHelp" class="form-text text-info">2&hyphen;12 years</small>
+								  </div>
+							</fieldset>
+							<fieldset class="more-option">
+							  <details>
+								<summary class="more-link"> <b>More options: </b>Class of travel, Airline Preference</summary>
+								 <div class="form-group">
+								<label for="class-of-travel">Class of travel</label>
+								<select name="class-of-travel" class="form-control">
+								  <option value="economy">Economy</option>
+								  <option value="business">Business class</option>
+								  <option value="firstClass">First class</option>
+								</select>
+							  </div>
+							  <div class="form-group">
+								<label for="airline-name" class="bold-type">Preferred Airline</label> 
+								<input class="form-control" type="text" name="airline-name" size="30" maxlength="100" placeholder="Airline name"/> 
+							  </div>
+							</details> 
+							</fieldset>
+						  </form>
+						  <a href="booking-thankyou.html" style="text-decoration: none; border-bottom: none; color: white;"><button href="booking-thankyou.html" role="button" class="btn btn-block btn-primary" id="gcw-flights-form-flp">Search Flights</button></a>
+		  		</div>
+	  </div>
+	  <div class="col-12 col-md-6 offset-md-1 d-flex">
+		  <div class="full-picture-booking flex-grow-1">
+		  </div>
+	  </div>
+  </div>
+</div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+
+    <!-- optional plugins -->
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+    <!--   lazy javascript -->
+    <script src="./assets/js/lazy.js"></script>
+  </body>
+</html>

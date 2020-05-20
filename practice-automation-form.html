@@ -1,0 +1,323 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/lazy.css">
+        <link rel="stylesheet" href="./assets/css/demo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+                integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+                crossorigin="anonymous">
+
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
+                <div class="container">
+
+                        <a class="navbar-brand d-flex align-items-center" href="index.html"><img
+                                        src="assets/img/Ingage_arrow_no_BG.png" alt="Ingage Arrow" class="mr-2"
+                                        height="30"> Engage with Ingage</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                </div>
+        </nav>
+        <div class="container">
+                <div class="py-5 text-center title-text">
+                        <h2>Practice Automation Form</h2>
+                </div>
+                <div id="content" class="content" role="main">
+                        <h2>Different types of Alerts</h2>
+                        <p>There are a few types of alerts which JavaScript defines. This page is a test page which
+                                contains all these alerts.</p>
+                        <h3>Simple Alert Pop up</h3>
+                        <p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#simpleAlert">
+                                        Simple Alert
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="simpleAlert" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                        <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">A Simple
+                                                                        Alert</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                A simple alert
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                                <button type="button" class="btn btn-primary"
+                                                                        data-dismiss="modal"
+                                                                        aria-label="Close">Okay</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </p>
+                        <h3>Confirm Alert box</h3>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#confirmPopup">
+                                        Confirm Pop Up
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="confirmPopup" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                        <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Confirm
+                                                                        Pop Up</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                Confirm pop up with OK and Cancel button
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-dismiss="modal">Close</button>
+                                                                <button type="button"
+                                                                        class="btn btn-primary">OK</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </p>
+                        <h3>Prompt Alert box</h3>
+                        <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#promptPopup">
+                                        Prompt Pop Up
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="promptPopup" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                        <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Prompt
+                                                                        Pop Up</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                        aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                What is your name?
+                                                                <div class="control-group"><input id="modal-name"
+                                                                                type="text" class="form-control"></div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                        data-dismiss="modal">Cancel</button>
+                                                                <button type="button" class="btn btn-primary"
+                                                                        data-dismiss="modal">OK</button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </p>
+
+                </div>
+                <form class="form-horizontal">
+                        <fieldset>
+                                <p></p>
+                                <h2>Personal Information</h2>
+                                <p></p>
+                                <div>&nbsp;</div>
+                                <div class="control-group"><a title="Automation Practice Form"
+                                                href="http://toolsqa.com/automation-practice-form/"><strong>Partial Link
+                                                        Test</strong></a></div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div class="control-group"><a title="Automation Practice Table"
+                                                href="http://toolsqa.com/automation-practice-table/"><strong>Link
+                                                        Test</strong></a></div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div class="control-group"><strong>First name:</strong> <input name="firstname"
+                                                type="text" class="form-control"
+                                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                </div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div class="control-group"><strong>Last name:</strong> <input id="lastname" type="text"
+                                                class="form-control"></div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <p><button id="buttonwithclass" class="btn" name="submit">Simple Button</button><br></p>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <div class="control-group"><strong><label>Sex</label></strong>
+                                        <input id="sex-0" name="sex" type="radio" value="Male">&nbsp;
+                                        Male&nbsp;&nbsp;&nbsp;
+                                        <input id="sex-1" name="sex" type="radio" value="Female"><label class="radio"
+                                                for="sex-1"> Female</label></div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                                <p></p>
+                                <div>&nbsp;</div>
+                                <div class="control-group"><strong><label class="control-label" for="exp">Years of
+                                                        Experience</label></strong>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-0" name="exp" type="radio" value="1"
+                                                        class="custom-control-input">
+                                                <label class="custom-control-label" for="exp-0">1</label>
+                                        </div>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-1" name="exp" type="radio" value="2"
+                                                        class="custom-control-input">
+                                                <label class="custom-control-label" for="exp-1">2</label>
+                                        </div>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-2" name="exp" type="radio" value="3"
+                                                        class="custom-control-input">
+                                                <label class="custom-control-label" for="exp-2">3</label>
+                                        </div>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-3" name="exp" type="radio" value="4"
+                                                        class="custom-control-input">
+                                                <label class="custom-control-label" for="exp-3">4</label>
+                                        </div>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-4" name="exp" type="radio" value="5"
+                                                        class="custom-control-input">
+                                                <label class="custom-control-label" for="exp-4">5</label>
+                                        </div>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-5" name="exp" type="radio" value="6"
+                                                        class="custom-control-input">
+                                                <label class="custom-control-label" for="exp-5">6</label>
+                                        </div>
+                                        <div class="custom-control custom-radio my-2">
+                                                <input id="exp-6" name="exp" type="radio" value="7"
+                                                        class="custom-control-input" checked>
+                                                <label class="radio inline custom-control-label" for="exp-6">7</label>
+                                        </div>
+                                </div>
+                                <div>&nbsp;</div>
+                                <p>&nbsp;</p>
+                                <p>Date: <input id="datepicker" type="text"></p>
+                                <p>&nbsp;</p>
+                                <p></p>
+                                <div class="control-group"><strong><label class="control-label"
+                                                        for="profession">Profession</label></strong>
+                                        <input id="profession-0" name="profession" type="checkbox"
+                                                value="Manual Tester"> Manual
+                                        Tester&nbsp;&nbsp;&nbsp; <input id="profession-1" name="profession"
+                                                type="checkbox" value="Automation Tester"><label class="checkbox"
+                                                for="profession-1"> Automation Tester</label>
+                                </div>
+                                <div>&nbsp;</div>
+                                <p></p>
+                                <div class="control-group"><strong><label class="control-label" for="photo">Profile
+                                                        Picture</label></strong>
+                                        <input id="photo" class="input-file" name="photo" type="file"></div>
+                                <p></p>
+                                <div class="control-group">&nbsp;</div>
+                                <div class="control-group"><strong>Download Framework</strong></div>
+                                <div class="control-group"><a
+                                                href="http://toolsqa.com/wp-content/uploads/2014/04/OnlineStore.zip">Selenium
+                                                Automation Hybrid Framework</a></div>
+                                <div class="control-group"><a
+                                                href="http://toolsqa.com/wp-content/uploads/2016/09/Test-File-to-Download.xlsx">Test
+                                                File to
+                                                Download</a></div>
+                                <div>&nbsp;</div>
+                                <div class="control-group">&nbsp;</div>
+                                <div class="control-group"><strong><label>Automation Tool</label></strong> <input
+                                                id="tool-0" name="tool" type="checkbox" value="QTP">&nbsp; QTP <input
+                                                id="tool-1" name="tool" type="checkbox" value="Selenium IDE">&nbsp;
+                                        Selenium IDE <input id="tool-2" name="tool" type="checkbox"
+                                                value="Selenium Webdriver">&nbsp; Selenium Webdriver</div>
+                                <div>&nbsp;</div>
+                                <p></p>
+                                <div class="control-group form-group">
+                                        <p><strong><label>Continents</label></strong></p>
+                                        <div class="controls"><select id="continents" class="input-xlarge form-control"
+                                                        name="continents">
+                                                        <option value="AS">Asia</option>
+                                                        <option value="EU">Europe</option>
+                                                        <option value="AF">Africa</option>
+                                                        <option value="AUS">Australia</option>
+                                                        <option value="SA">South America</option>
+                                                        <option value="NA">North America</option>
+                                                        <option value="AN">Antarctica</option>
+                                                </select></div>
+                                        <br>
+                                        <p><strong><label>Continents – Multiple Select</label></strong></p>
+                                        <div class="controls"><select id="continentsmultiple"
+                                                        class="input-xlarge form-control" name="continents" multiple="">
+                                                        <option value="AS">Asia</option>
+                                                        <option value="EU">Europe</option>
+                                                        <option value="AF">Africa</option>
+                                                        <option value="AUS">Australia</option>
+                                                        <option value="SA">South America</option>
+                                                        <option value="NA">North America</option>
+                                                        <option value="AN">Antarctica</option>
+                                                </select></div>
+                                        <div class="controls">&nbsp;</div>
+                                </div>
+                                <p></p>
+                                <div class="control-group form-group">
+                                        <p><strong><label>Selenium Commands</label></strong></p>
+                                        <div class="controls"><select id="selenium_commands"
+                                                        class="input-xlarge form-control" multiple=""
+                                                        name="selenium_commands">
+                                                        <option>Browser Commands</option>
+                                                        <option>Navigation Commands</option>
+                                                        <option>Switch Commands</option>
+                                                        <option>Wait Commands</option>
+                                                        <option>WebElement Commands</option>
+                                                </select></div>
+                                </div>
+                                <div class="controls">&nbsp;</div>
+                                <p></p>
+                                <div class="control-group">
+                                        <div class="button"><button id="submit" class="btn btn-info"
+                                                        name="submit">Button</button></div>
+                                        <div class="button"><button id="submit1" class="btn btn-info"
+                                                        name="submit">Button 2</button></div>
+                                        <div class="button"><button id="submit2" class="btn btn-info"
+                                                        name="submit">Button 3</button></div>
+                                        <div class="button"><button id="submit3" class="btn btn-info"
+                                                        name="submit">Button 4</button></div>
+                                </div>
+                        </fieldset>
+                        <p><label id="NextedText" class="abc"><br> <span class="bcd">Text1</span><br> Text2<br> </label>
+                        </p>
+                        <ul id="beverages">
+                                <li>Coffee</li>
+                                <li>Tea</li>
+                                <li>Milk</li>
+                                <li>skimmed Milk</li>
+                        </ul>
+                </form>
+        </div>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="./assets/vendor/jquery/jquery.min.js"></script>
+        <script src="./assets/vendor/popper/popper.min.js"></script>
+        <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+        <!-- optional plugins -->
+        <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+        <!--   lazy javascript -->
+        <script src="./assets/js/lazy.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QA - Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="QA Tools">
+
+    <link href="assets/img/favicon.ico" rel="icon" type="image/png">
+    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+		<link rel="stylesheet" href="./assets/css/lazy.css">
+		<link rel="stylesheet" href="./assets/css/demo.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  </head>
+
+<body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4 fixed-top">
+                <div class="container">
+            
+                  <a class="navbar-brand d-flex align-items-center" href="index.html"><img
+                    src="assets/img/Ingage_arrow_no_BG.png" alt="Ingage Arrow" class="mr-2"
+                    height="30"> Engage with Ingage</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-3" aria-controls="navbarNavDropdown-3"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
+<div class="intro bg-light">
+<div class="container">
+      <!-- Buttons
+    ================================================== -->
+    <div class="section main-section">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div class="header title-text">
+                <h2 id="buttons">Inputs</h2>
+                <p>All form controls are improved for better contrast and visibility. Besides the Bootstrap 4 custom inputs, we have also added a special plugin for sliders.</p>
+              </div>
+                <div class="inputs">
+                      <div class="component">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <p class="lead pt-3">Default</p>
+                            <div class="form-group">
+                              <input type="email" class="form-control" id="email" placeholder="Your Email Address">
+                            </div>
+  
+                            <div class="form-group">
+                              <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="lead pt-3">With Icons</p>
+  
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+  <!--
+                            <div class="input-group mb-3">
+                              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                              <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-user"></i></span>
+                              </div>
+                            </div>
+  -->
+  
+                            <div class="input-group mt-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text disabled" id="basic-addon2"><i class="fas fa-key"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2" disabled="">
+                            </div>
+  
+                          </div>
+                        </div>
+                      </div>
+  
+  <!-- 					            validations -->
+                      <div class="component">
+                        <p class="lead">With Validation</p>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="form-group has-success">
+                              <input type="text" value="correct value" class="form-control is-valid" id="inputValid">
+                              <div class="valid-feedback">Success! You've done it.</div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group has-danger">
+                              <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
+                              <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+  <!-- 					            custom inputs -->
+                      <div class="component">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <p class="lead">Custom Select</p>
+                            <div class="form-group">
+                              <select class="custom-select">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <p class="lead">File Input</p>
+                            <div class="input-group">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+  <!-- 					            sliders -->
+                      <div class="component">
+                        <p class="lead">Sliders</p>
+                        <div class="row">
+                          <div class="col-lg-6">
+  
+                            <!-- Simple slider -->
+                            <div class="input-slider-container">
+                              <div id="input-slider" class="input-slider" data-range-value-min="0" data-range-value-max="100"></div>
+                              <div class="row mt-3">
+                                <div class="col-6">
+                                  <span id="input-slider-value" class="range-slider-value" data-range-value-low="0"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <!-- Range slider -->
+                              <div id="input-slider-range" data-range-value-min="100" data-range-value-max="500"></div>
+                              <div class="row">
+                                <div class="col-6">
+                                  <span class="range-slider-value value-low" data-range-value-low="200" id="input-slider-range-value-low"></span>
+                                </div>
+                                <div class="col-6 text-right">
+                                  <span class="range-slider-value value-high" data-range-value-high="400" id="input-slider-range-value-high"></span>
+                                </div>
+                              </div>
+                          </div>
+  
+                        </div>
+                      </div>
+  
+  <!-- 					            checkbox/radio/toggle -->
+                      <div class="component">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <p class="lead">Checkboxes</p>
+                            <div class="form-group">
+                              <div class="custom-control custom-checkbox my-2">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                                <label class="custom-control-label" for="customCheck1">Hozier</label>
+                              </div>
+                              <div class="custom-control custom-checkbox my-2">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">The 1975</label>
+                              </div>
+                              <div class="custom-control custom-checkbox my-2">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" checked disabled>
+                                <label class="custom-control-label" for="customCheck3">Billie Eilish</label>
+                              </div>
+  
+                              <div class="custom-control custom-checkbox my-2">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4" disabled>
+                                <label class="custom-control-label" for="customCheck4">Alt-J</label>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="col-lg-4">
+                            <p class="lead">Radio Buttons</p>
+                            <div class="form-group">
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadio1">Glastonbury</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Coachella</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio3" name="customRadio2" class="custom-control-input" checked disabled>
+                                <label class="custom-control-label" for="customRadio3">Primavera</label>
+                              </div>
+                              <div class="custom-control custom-radio my-2">
+                                <input type="radio" id="customRadio4" name="customRadio2" class="custom-control-input" disabled>
+                                <label class="custom-control-label" for="customRadio4">Burning Man</label>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <div class="col-lg-4">
+                            <p class="lead">Toggle Buttons</p>
+                            <div class="form-group">
+                              <div class="custom-control custom-switch my-2">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                <label class="custom-control-label" for="customSwitch1">Music</label>
+                              </div>
+                              <div class="custom-control custom-switch my-2">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                <label class="custom-control-label" for="customSwitch2">Movies</label>
+                              </div>
+                              <div class="custom-control custom-switch my-2">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch3" checked disabled>
+                                <label class="custom-control-label" for="customSwitch3">Crafts</label>
+                              </div>
+                              <div class="custom-control custom-switch my-2">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch3" disabled>
+                                <label class="custom-control-label" for="customSwitch3">DIY</label>
+                              </div>
+                            </div>
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                </div>
+  
+          </div>
+      
+      
+          </div>
+      
+        </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./assets/vendor/jquery/jquery.min.js"></script>
+<script src="./assets/vendor/popper/popper.min.js"></script>
+<script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+
+<!-- optional plugins -->
+<script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+<!--   lazy javascript -->
+<script src="./assets/js/lazy.js"></script>
+</body>
+</html>
