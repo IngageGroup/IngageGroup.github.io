@@ -114,7 +114,21 @@
             align-items: center;
     justify-content: space-around;
   }
-  
+  .radio-align {
+    position: absolute;
+    left: 3px;
+    top: 16px;
+  }
+  .radio-align-checkout {
+    position: absolute;
+    left: 3px;
+    top: 8px;
+  }
+  .check-align {
+    position: absolute;
+    left: 3px;
+    top: 8px;
+  }
   .spinner-container {
     height: 80px;
     width: 80px;
