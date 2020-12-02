@@ -174,7 +174,7 @@ function setQuestionsPoolByForm() {
             return null; //remove from list if both are empty
         }
         else {
-            q = q ? q : "First L";//make values the same if only one was added
+            q = q ? q : a;//make values the same if only one was added
             a = a ? a : q;
         }
         return {
