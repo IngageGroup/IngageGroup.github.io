@@ -157,7 +157,7 @@ function initQuestionsPool() {
     var questionsHtml = ""; // $("#questions");
     var savedQuestions = localStorage.getItem("questionsPool");
     if (savedQuestions) {
-        questionsPool = JSON.parse(savedQuestions);
+        //questionsPool = JSON.parse(savedQuestions);
     }
     for (var i = 0, len = questionsPool.length; i < len; i++) {
         questionsHtml += questionTemplate.replace("{q}", questionsPool[i].q).replace("{a}", questionsPool[i].a);
