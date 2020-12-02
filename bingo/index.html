@@ -24,7 +24,7 @@
             -webkit-print-color-adjust: exact;
             border-radius: 9px;
             width: 560px;
-            height: 797.5px;
+            height: 560px;
             text-align: center;
             padding: 5px;
             margin-bottom: 20px;
@@ -93,10 +93,20 @@
                 page-break-before: always;
             }
         }
+
+        .image-container {
+            background-image: url(https://photos.smugmug.com/Portraits/Employee-Photos/n-vf4gPC/Active/i-9Gpq6Mj/0/e3eac3b8/M/AndyE-M.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- <div class="image-container"></div> -->
     <div style="display: none;">
         <form action="#" id="bingoForm">
             <div class="noPrint">
@@ -260,7 +270,8 @@
         for (var key in card) {
             if (key !== "positions" && card.hasOwnProperty(key)) {
                 if (card[key].img.indexOf("http") === 0) {
-                    html += "<span class='cardItem' dir='auto' style='background-repeat:no-repeat;background-position: center center;background-size:contain;background-image:url(" + card[key].img + ");'>&nbsp;</span>";
+                    html += "<div class='cardItem image-container' style='background-image: url(" + card[key].img + ")'></div>";
+                    // html += "<span class='cardItem' dir='auto' style='background-repeat:no-repeat;background-position: center center;background-size:contain;background-image:url(" + card[key].img + ");'>&nbsp;</span>";
                 }
                 else {
                     html += "<span class='cardItem' dir='auto' >" + card[key].img + "</span>";
