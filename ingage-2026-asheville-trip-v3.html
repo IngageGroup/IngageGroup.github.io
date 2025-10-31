@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 Annual Trip – Asheville, NC</title>
+    <style>
+      :root {
+        --bg: #0f172a; /* slate-900 */
+        --card: #111827; /* gray-900 */
+        --muted: #9ca3af; /* gray-400 */
+        --text: #f8fafc; /* slate-50 */
+        --accent: #056cb6; /* green-500 */
+        --accent-2: #ee6823; /* violet-500 */
+        --border: #1f2937; /* gray-800 */
+        --chip: #0b1220;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial,
+          "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 20% -10%, rgba(5, 108, 182, 0.08), transparent),
+          radial-gradient(1200px 600px at 90% 0%, rgba(34, 197, 94, 0.1), transparent), var(--bg);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      header.hero {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px;
+        margin-bottom: 20px;
+      }
+      .eyebrow {
+        display: inline-block;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        text-transform: uppercase;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: var(--chip);
+      }
+      h1 {
+        font-size: clamp(28px, 4vw, 40px);
+        margin: 12px 0 4px 0;
+        line-height: 1.2;
+      }
+      .subhead {
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      .cta {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #ee6823, #e1454f);
+        color: #06110a;
+        border: none;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 800px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      section.card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+      }
+      h2 {
+        font-size: clamp(20px, 2.8vw, 28px);
+        margin: 0 0 8px 0;
+      }
+      h3 {
+        margin: 12px 0 6px;
+        font-size: 18px;
+      }
+      ul {
+        margin: 8px 0 0 18px;
+      }
+      .kicker {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .list-plain {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+      .pill {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--chip);
+        color: var(--muted);
+        font-size: 12px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .two-col {
+        columns: 1;
+        column-gap: 28px;
+      }
+      @media (min-width: 720px) {
+        .two-col {
+          columns: 2;
+        }
+      }
+      .callout {
+        border-left: 3px solid var(--accent);
+        padding-left: 12px;
+        margin: 10px 0;
+        color: var(--muted);
+      }
+      .placeholder {
+        display: inline-block;
+        background: linear-gradient(90deg, rgba(5, 108, 182, 0.08), rgba(34, 197, 94, 0.12));
+        border: 1px dashed var(--accent);
+        color: var(--text);
+        font-weight: 600;
+        padding: 8px 10px;
+        border-radius: 8px;
+      }
+      .footer {
+        color: var(--muted);
+        text-align: center;
+        margin: 18px 0 8px;
+        font-size: 14px;
+      }
+      .chips {
+        margin-top: 8px;
+      }
+      .spaced > * + * {
+        margin-top: 10px;
+      }
+      .small {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+      }
+      .table td {
+        padding: 10px 12px;
+        background: #0b1220;
+        border: 1px solid var(--border);
+      }
+      .table tr td:first-child {
+        border-radius: 10px 0 0 10px;
+        width: 140px;
+        color: var(--muted);
+        background: #0c1423;
+      }
+      .table tr td:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .topnav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: saturate(180%) blur(6px);
+        background: rgba(15, 23, 42, 0.6);
+        border-bottom: 1px solid var(--border);
+      }
+      .topnav .navwrap {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+      }
+      .topnav a {
+        color: var(--text);
+        font-size: 14px;
+        position: relative;
+        text-decoration: none;
+      }
+      .topnav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        height: 2px;
+        background: var(--accent-2);
+        width: 0;
+        transition: width 0.25s ease;
+      }
+      .topnav a:hover::after,
+      .topnav a:focus-visible::after {
+        width: 100%;
+      }
+      .topnav a:hover {
+        color: var(--accent);
+      }
+      .back-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 24px;
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: linear-gradient(90deg, rgba(34, 197, 94, 0.15), rgba(168, 85, 247, 0.15));
+        color: var(--text);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+      }
+      .back-to-top.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .divider svg {
+        width: 100%;
+        height: 64px;
+        display: block;
+      }
+      .mountains {
+        fill: rgba(248, 250, 252, 0.06);
+      }
+      html .photostrip {
+      }
+      .photostrip {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 10px 0 22px;
+      }
+      @media (min-width: 800px) {
+        .photostrip {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+      .photostrip img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: #0b1220;
+        display: block;
+      }
+      @media (min-width: 800px) {
+        /* removed .tall height rule */
+        .photostrip img.tall {
+          height: 220px;
+        }
+      }
+      .photostrip figure {
+        margin: 0;
+        position: relative;
+      }
+      .photostrip figcaption {
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+        font-size: 12px;
+        color: #e5e7eb;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 3px 6px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero" role="banner">
+        <span class="eyebrow">Hilton Asheville Biltmore Park • Jan 30 – Feb 1, 2026</span>
+        <h1>2026 Annual Trip – Asheville, NC</h1>
+        <p class="subhead">
+          Ingage is excited to once again honor our employees’ hard work by heading to the Paris of the South! Celebrate
+          your contributions with a weekend of connection and fun.
+        </p>
+        <p>
+          <a class="cta rsvp-btn" href="https://form.jotform.com/253025070709047" target="_blank" rel="noopener"
+            >RSVP by December 8, 2025</a
+          >
+        </p>
+        <p class="small">
+          If you cannot attend, please still complete the RSVP — it’s only a couple questions and helps with planning.
+        </p>
+      </header>
+
+      <section class="photostrip" aria-label="Asheville vibes photos">
+        <figure>
+          <img
+            src="https://photos.smugmug.com/Cdn/Cdn/i-bGLVxxk/0/NXpJQMj7B8S6mZbmCbzz2GM6PCPm2HZdB6k7WMh4n/L/qmca2617-L.jpg"
+            alt="Fall mountain overlook" />
+          <figcaption>Fall Overlook</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://photos.smugmug.com/Cdn/Cdn/i-TVPqGvJ/0/KQM3G5zDZkqRbzqgchfTdGqGhC3mPNT4KvjM2Wpfm/L/river-arts-district-4-L.png"
+            alt="River Arts District colorful buildings" />
+          <figcaption>River Arts District</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://photos.smugmug.com/Cdn/Cdn/i-dRZhRs6/0/NTS9Gzk7tzskSwGbZQpbVHMGNBTTLKFjJZT8VmCKM/L/asheville-nc-blue-ridge-mountains-sunset-welcome-to-asheville-dave-allen-L.jpg"
+            alt="Blue Ridge Mountains sunrise" />
+          <figcaption>Blue Ridge Sunrise</figcaption>
+        </figure>
+      </section>
+
+      <!-- <nav class="topnav" aria-label="Section navigation">
+        <div class="navwrap">
+          <a href="#overview">Overview</a>
+          <span aria-hidden="true">•</span>
+          <a href="#itinerary">Itinerary</a>
+          <span aria-hidden="true">•</span>
+          <a href="#travel-reimbursement">Reimbursement</a>
+          <span aria-hidden="true">•</span>
+          <a href="#explore">Explore</a>
+        </div>
+      </nav> -->
+
+      <section class="card" id="overview" style="margin-bottom: 20px">
+        <h2>Trip Overview</h2>
+        <p>
+          All Salary and Hourly employees are invited to join us in Asheville to celebrate another great year. Each
+          employee is welcome to bring one guest to the Happy Hour and Dinner.
+        </p>
+        <ul>
+          <li><strong>Hotel Stay:</strong> One hotel room / 2 nights covered (Jan 30 – Feb 1)</li>
+
+          <li><strong>Extended Stay:</strong> Optional at group rate of <strong>$139/night + taxes/fees</strong></li>
+          <li>
+            <strong>Rooming Dates:</strong> Indicate check‑in/check‑out on the RSVP form; we’ll share with the hotel
+          </li>
+          <li><strong>Parking:</strong> Provided at the hotel for <strong>FREE</strong></li>
+        </ul>
+        <div class="callout">
+          Location Highlights: Asheville is known for its mountains, breweries, arts scene, and amazing food!
+        </div>
+      </section>
+
+      <section class="card" id="itinerary" style="margin-bottom: 20px">
+        <h2>Itinerary</h2>
+        <p class="kicker">
+          The primary purpose of this trip is to celebrate our accomplishments and create opportunities for connection
+          and community. Please make every effort to attend the Happy Hour and Dinner while in Asheville.
+        </p>
+
+        <!-- Dress Code Note -->
+        <!-- <div class="callout" style="margin-bottom: 12px">
+          👕 <strong>Friday Happy Hour:</strong> Casual — jeans + cozy sweaters welcome<br />
+          👗 <strong>Saturday Dinner:</strong> Dressy Casual — no ties needed, just skip cut‑offs, tees & gym gear 😎
+        </div> -->
+
+        <table class="table" aria-label="Trip itinerary">
+          <tr>
+            <td>Friday</td>
+            <td>
+              Welcome Happy Hour <br />
+              <strong>5:30–7:00 pm</strong> <br />
+              Drinks & Light Bites <br />
+              At Hotel<br />
+              Casual — jeans + cozy sweaters welcome
+            </td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>
+              Volunteer Opportunity — <em>Details coming soon</em><br /><br />
+              Celebration Dinner <br />
+              <strong>7:15 pm</strong> <br />
+              At Hotel<br />
+              Dressy Casual — no ties needed, just skip cut‑offs, tees & gym gear
+            </td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Depart for Cincinnati</td>
+          </tr>
+        </table>
+      </section>
+
+      <div class="grid" style="margin-bottom: 20px">
+        <!-- <section class="card" id="overview">
+          <h2>Trip Overview</h2>
+          <p>
+            All Salary and Hourly employees are invited to join us in Asheville to celebrate another great year. Each
+            employee is welcome to bring one guest to the Happy Hour and Dinner.
+          </p>
+          <ul>
+            <li><strong>Hotel Stay:</strong> One hotel room / 2 nights covered (Jan 30 – Feb 1)</li>
+
+            <li><strong>Extended Stay:</strong> Optional at group rate of <strong>$139/night + taxes/fees</strong></li>
+            <li>
+              <strong>Rooming Dates:</strong> Indicate check‑in/check‑out on the RSVP form; we’ll share with the hotel
+            </li>
+            <li><strong>Parking:</strong> Provided at the hotel for <strong>FREE</strong></li>
+          </ul>
+          <div class="callout">
+            Location Highlights: Asheville is known for its mountains, breweries, arts scene, and amazing food!
+          </div>
+        </section> -->
+
+        <section class="card">
+          <h2>Included</h2>
+
+          <ul>
+            <li>One hotel room for two nights</li>
+            <li>Welcome Happy Hour</li>
+            <li>Celebration Dinner</li>
+            <li>$250 travel reimbursement <span class="small">(see policy below)</span></li>
+            <li>Hotel parking</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Not Included</h2>
+          <ul>
+            <li>Food & drinks outside of scheduled events</li>
+            <li>Free-time activities and admissions</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="card" id="travel-reimbursement" style="margin-bottom: 20px">
+        <h2>Travel Reimbursement</h2>
+        <p>
+          <strong>$250 flat reimbursement</strong> for employees who <em>drive their own car</em> to Asheville —
+          <strong>no receipts required</strong>.
+        </p>
+        <ul>
+          <li>
+            <strong>How to claim:</strong> After you return, submit a Zoho Expense for <strong>$250</strong> with
+            category <strong>“Annual Trip – Employee Only.”</strong>
+          </li>
+          <li>
+            <strong>Carpool drawing:</strong> Cars with <em>more than one employee</em> are entered into a drawing.
+            <em>One entry per car.</em> If your car is selected, <strong>every employee in that car</strong> receives a
+            <strong>$100 gift card</strong>. <em>Fun road-trip photos required for entry!</em> 📸
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" style="margin-bottom: 20px">
+        <h2>RSVP & Questions</h2>
+        <p>Complete your RSVP to reserve your room and help us plan a great weekend.</p>
+        <p>
+          <a class="cta" href="https://form.jotform.com/253025070709047" target="_blank" rel="noopener"
+            >Complete the RSVP Form</a
+          >
+        </p>
+        <p>
+          <strong>Questions?</strong>
+          Contact Tony Maddox (tony.maddox@ingagepartners.com or slack
+          <a href="https://ingagepartners.slack.com/team/U02CUAD3A">@Tony Maddox</a>)
+        </p>
+        <p>Slack Channel for trip participants coming soon...stay tuned</p>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            class="mountains"
+            d="M0,80 L120,60 L240,85 L360,55 L480,90 L600,50 L720,80 L840,60 L960,85 L1080,55 L1200,80 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+      <section class="card" id="explore" aria-labelledby="explore-heading">
+        <h2 id="explore-heading">Explore Asheville</h2>
+        <p class="kicker">
+          Make the most of your free time — Asheville is packed with charm, flavor, and mountain vibes.
+        </p>
+        <div class="chips">
+          <span class="pill">🍺 Breweries</span>
+          <span class="pill">🏰 Biltmore</span>
+          <span class="pill">🚶 Trails</span>
+          <span class="pill">🎨 Arts</span>
+          <span class="pill">🍽 Food</span>
+          <span class="pill">🚗 Nearby</span>
+        </div>
+        <div class="grid" style="margin-top: 14px">
+          <div class="card" style="padding: 16px">
+            <h3>🍺 Breweries & Craft Drinks</h3>
+            <ul>
+              <li><strong>Sierra Nevada Brewery</strong> — must‑visit campus, fire pits, great food</li>
+              <li><strong>Wicked Weed Brewing</strong> — inventive brews, fun downtown vibe</li>
+              <li><strong>Highland Brewing Co.</strong> — Asheville’s original craft brewery</li>
+              <li><strong>Biltmore Park Town Square</strong> — casual taps & wine bars steps from the hotel</li>
+            </ul>
+            <p class="small">Not a beer fan? Try Urban Orchard Cider Co. or Chemist Gin Distillery.</p>
+          </div>
+          <div class="card" style="padding: 16px">
+            <h3>🚶 Trails & Outdoors</h3>
+            <ul>
+              <li>Blue Ridge Parkway overlooks — short drives, big views</li>
+              <li>North Carolina Arboretum — peaceful trails</li>
+              <li>Bent Creek Experimental Forest — hiking & biking</li>
+              <li>Downtown Riverwalk & Greenway — easy strolls</li>
+            </ul>
+            <p class="small">January in the mountains = crisp air. Dress warm and layer.</p>
+          </div>
+          <div class="card" style="padding: 16px">
+            <h3>🏰 Biltmore Estate & Village</h3>
+            <ul>
+              <li>Grounds & gardens</li>
+              <li>Winery tastings</li>
+              <li>Historic home tour</li>
+              <li>Village shops & dining</li>
+            </ul>
+            <p class="small">Tickets required — consider booking early if you'd like to visit.</p>
+          </div>
+
+          <div class="card" style="padding: 16px">
+            <h3>🎨 Arts, Shops & Local Flavor</h3>
+            <ul>
+              <li>River Arts District — artists’ studios & galleries</li>
+              <li>Biltmore Park Town Square — shops & eateries by the hotel</li>
+              <li>Downtown Asheville — local shops, bookstores, cafes, buskers</li>
+            </ul>
+          </div>
+          <div class="card" style="padding: 16px">
+            <h3>🚗 Easy Adventures Nearby</h3>
+            <ul>
+              <li>Brevard — waterfalls & small‑town charm</li>
+              <li>Black Mountain — artsy shops + coffee</li>
+              <li>Hendersonville — wineries & mountain vibes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer">
+        We can't wait to celebrate with you — thank you for all you do to make Ingage & Revision special.
+      </p>
+    </div>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑ Top</button>
+    <script>
+      (function () {
+        var btn = document.getElementById("backToTop");
+        function onScroll() {
+          var y = window.scrollY || document.documentElement.scrollTop;
+          if (y > 300) {
+            btn.classList.add("show");
+          } else {
+            btn.classList.remove("show");
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+    </script>
+    <script>
+      // Confetti celebration on RSVP click
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.querySelector(".rsvp-btn");
+        if (!btn) return;
+        btn.addEventListener("click", function () {
+          const text = document.createElement("div");
+          text.textContent = "🎉 You're going to Asheville! 🎉";
+          text.style.position = "fixed";
+          text.style.top = "20px";
+          text.style.left = "50%";
+          text.style.transform = "translateX(-50%)";
+          text.style.background = "rgba(0,0,0,0.6)";
+          text.style.padding = "10px 16px";
+          text.style.borderRadius = "8px";
+          text.style.fontSize = "18px";
+          text.style.color = "#fff";
+          text.style.zIndex = "1000";
+          document.body.appendChild(text);
+          setTimeout(() => text.remove(), 2000);
+
+          // burst confetti
+          for (let i = 0; i < 40; i++) {
+            const conf = document.createElement("div");
+            conf.textContent = ["🎉", "✨", "🍂", "🧡", "🎊"][Math.floor(Math.random() * 5)];
+            conf.style.position = "fixed";
+            conf.style.left = Math.random() * 100 + "vw";
+            conf.style.top = "0";
+            conf.style.fontSize = "18px";
+            conf.style.animation = `fall 1.2s ease-out forwards`;
+            conf.style.zIndex = "999";
+            document.body.appendChild(conf);
+            setTimeout(() => conf.remove(), 1500);
+          }
+        });
+      });
+
+      // falling animation
+      const style = document.createElement("style");
+      style.textContent = `
+      @keyframes fall {
+        to {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>
